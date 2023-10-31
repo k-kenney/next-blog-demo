@@ -16,9 +16,9 @@ module.exports = {
       },
       fontFamily: {
         mr: ["var(--font-mr)"],
-        in: ["var(--font-in)"]
-      }
+        in: ["var(--font-in)"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
