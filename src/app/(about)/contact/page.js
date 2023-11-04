@@ -1,5 +1,5 @@
-import ContactForm from "../components/Contact/ContactForm";
-import LottieAnimation from "../components/Contact/LottieAnimation";
+import ContactForm from "../../components/Elements/Contact/ContactForm";
+import LottieAnimation from "../../components/Elements/Contact/LottieAnimation";
 
 
 
