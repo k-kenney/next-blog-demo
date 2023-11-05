@@ -1,9 +1,16 @@
+"use client"
+
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 import { DribbbleIcon, GithubIcon, LinkedinIcon, SunIcon, TwitterIcon } from "../Icons";
+import siteMetadata from "../../utils/siteMetaData";
+import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 
 const Header = () => {
+
+  const [mode, setMode] = useThemeSwitch()
+
   return (
     <header className="w-full p-4 px-10 flex items-center justify-between">
       <Logo />
@@ -11,16 +18,16 @@ const Header = () => {
         <Link href="/" className="mr-2">Home</Link>
         <Link href="/about" className="mx-2">About</Link>
         <Link href="/contact" className="ml-2 mx-2">Contact</Link>
-        <button>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
             <SunIcon />
         </button>
       </nav>
 
       <div>
-        <a href="http://example.com" className="inline-block w-6 h-6 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200"/></a>
-        <a href="http://example.com" className="inline-block w-6 h-6 mr-4"><TwitterIcon className="hover:scale-125 transition-all ease duration-200"/></a>
-        <a href="http://example.com" className="inline-block w-6 h-6 mr-4"><GithubIcon className="hover:scale-125 transition-all ease duration-200"/></a>
-        <a href="http://example.com" className="inline-block w-6 h-6 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+        <a href={siteMetadata.linkedin} className="inline-block w-6 h-6 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+        <a href={siteMetadata.twitter} className="inline-block w-6 h-6 mr-4"><TwitterIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+        <a href={siteMetadata.github} className="inline-block w-6 h-6 mr-4"><GithubIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+        <a href={siteMetadata.dribbble} className="inline-block w-6 h-6 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
       </div>
     </header>
   );

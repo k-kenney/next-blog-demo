@@ -2,6 +2,11 @@ import Link from "next/link";
 import AboutCoverSection from "../../components/About/AboutCoverSection";
 import Skills from "../../components/About/Skills";
 
+export const metadata = {
+  title: "About Me",
+  description: "Here are some details about myself",
+};
+
 export default function About() {
   return (
     <>
