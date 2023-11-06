@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-4 px:5 sm:px-10 flex items-center justify-between">
+    <header className="w-full p-4 px-7 sm:px-10 flex items-center justify-between">
       <Logo />
       <button className="inline-block sm:hidden z-50" onClick={toggle}>
         <div className="w-6 cursor-pointer transition-all ease duration-300">
@@ -58,6 +58,31 @@ const Header = () => {
           </div>
         </div>
       </button>
+      <nav
+        className="w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize
+      items-center sm:hidden flex
+      fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50 transition-all ease duration-300"
+      style={{
+        top: click
+          ? "1rem"
+          : "-5rem",
+      }}
+      
+      >
+        <Link href="/" className="mr-2">
+          Home
+        </Link>
+        <Link href="/about" className="mx-2">
+          About
+        </Link>
+        <Link href="/contact" className="ml-2 mx-2">
+          Contact
+        </Link>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+          <SunIcon />
+        </button>
+      </nav>
+
       <nav
         className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize
       items-center hidden sm:flex
