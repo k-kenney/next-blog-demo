@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-4 px-7 sm:px-10 flex items-center justify-between">
+    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between">
       <Logo />
       <button className="inline-block sm:hidden z-50" onClick={toggle}>
         <div className="w-6 cursor-pointer transition-all ease duration-300">
