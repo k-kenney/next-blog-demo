@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           `${inter.variable} ${manrope.variable} font-mr bg-light dark:bg-dark`
         )}
       >
-        <Script>
+        <Script id="themeLayout">
           {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
               document.documentElement.classList.add('dark')
             } else {

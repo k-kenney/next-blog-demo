@@ -10,6 +10,8 @@ const AboutCoverSection = () => {
           src={profileCharacter}
           alt="Kayla cartoon"
           className="w-4/5 xs:3/4 md:w-full h-full object-contain object-center"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 10180px) 50vw 50vw"
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col items-start justify-center px-5 xs:p-10 pb-10 lg:px-16">
